@@ -1,12 +1,14 @@
 import React from 'react';
 
-function MainPage(props) {
-  console.log(props);
+import Header from '../components/header';
+import Body from '../components/body';
 
+function MainPage() {
   return (
-    <h1>
-      Hello, World!!!
-    </h1>
+    <div className="root" style={{ display: 'flex', flexDirection: 'column' }}>
+      <Header />
+      <Body />
+    </div>
   );
 }
 

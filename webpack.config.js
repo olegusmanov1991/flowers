@@ -1,24 +1,33 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   devtool: 'source-map',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules)/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
         },
+        include: [
+          path.resolve(__dirname, 'src'),
+        ],
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+        ],
       },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules',
     ],
   },
   devServer: {
