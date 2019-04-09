@@ -1,19 +1,47 @@
 export default (theme: Object): Object => ({
   root: {
-    position: 'fixed',
-    top: '0',
     width: '100%',
     height: '40px',
-    paddingLeft: '40px',
-    backgroundColor: '#0cb200',
+    padding: '20px 0',
+    backgroundColor: '#fff',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'start',
+    justifyContent: 'space-around',
+  },
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'start',
+    justifyContent: 'center',
+  },
+  city: {
+    fontSize: '13px',
+  },
+  email: {
+    fontSize: '11px',
+    fontFamily: 'calibri,sans-serif',
+  },
+  company: {
+    fontSize: '20px',
+  },
+  slogan: {
+    fontSize: '16px',
   },
   phone: {
-    height: '30px',
-    width: '30px',
-    marginRight: '20px',
+    fontSize: '22px',
+  },
+  call: {
+    lineHeight: '24px',
+    padding: '0 10px',
+    color: '#fff',
+    width: '180px',
+    maxWidth: '250px',
+    minWidth: '130px',
+    textAlign: 'center',
+    marginTop: '10px',
+    fontSize: '14px',
+    borderRadius: '1.5em',
+    backgroundColor: '#009708',
   },
 });

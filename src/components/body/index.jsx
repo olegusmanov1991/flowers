@@ -2,10 +2,9 @@ import * as React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 import styles from './styles';
+import Header from '../header';
 
-type PropsType = {
-  classes: Object;
-};
+type PropsType = {};
 
 class Body extends React.PureComponent<PropsType, {}> {
   constructor(props: PropsType) {
@@ -15,10 +14,8 @@ class Body extends React.PureComponent<PropsType, {}> {
   }
 
   render() {
-    const { classes } = this.props;
-
     return (
-      <div className={classes.background} />
+      <Header/>
     );
   }
 }
