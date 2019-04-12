@@ -1,23 +1,12 @@
 import * as React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 
-import styles from './styles';
+import styles from './styles.less';
 import Header from '../header';
+import Block1 from '../block1';
 
-type PropsType = {};
-
-class Body extends React.PureComponent<PropsType, {}> {
-  constructor(props: PropsType) {
-    super(props);
-
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <Header/>
-    );
-  }
-}
-
-export default withStyles(styles)(Body);
+export default () => (
+  <div className={styles.root}>
+    <Header />
+    <Block1 />
+  </div>
+);

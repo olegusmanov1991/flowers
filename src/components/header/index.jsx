@@ -1,39 +1,22 @@
 import * as React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 
-import styles from './styles';
+import styles from './styles.less';
 
-type PropsType = {
-  classes: Object;
-};
+const Header = () => (
+  <div className={styles.root}>
+    <div className={styles.card}>
+      <div className={styles.city}>г. Новосибирск</div>
+      <div className={styles.email}>rassadansk@gmail.com</div>
+    </div>
+    <div className={styles.card}>
+      <div className={styles.company}>Рассада НСК</div>
+      <div className={styles.slogan}>Отличные цветники с нашей заботой!</div>
+    </div>
+    <div className={styles.card}>
+      <div className={styles.phone}>+7 952 927 27 20</div>
+      <div className={styles.call}>Заказать звонок</div>
+    </div>
+  </div>
+);
 
-class Header extends React.PureComponent<PropsType, {}> {
-  constructor(props: PropsType) {
-    super(props);
-
-    this.state = {};
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <div className={classes.card}>
-          <div className={classes.city}>г. Новосибирск</div>
-          <div className={classes.email}>rassadansk@gmail.com</div>
-        </div>
-        <div className={classes.card}>
-          <div className={classes.company}>Рассада НСК</div>
-          <div className={classes.slogan}>Отличные цветники с нашей заботой!</div>
-        </div>
-        <div className={classes.card}>
-          <div className={classes.phone}>+7 952 927 27 20</div>
-          <div className={classes.call}>Заказать звонок</div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default withStyles(styles)(Header);
+export default Header;
